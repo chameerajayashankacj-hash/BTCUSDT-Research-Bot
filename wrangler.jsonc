@@ -1,0 +1,10 @@
+{
+  "name": "btcusdt-research-bot",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "triggers": { "crons": ["* * * * *"] },
+  "durable_objects": {
+    "bindings": [{ "name": "COLLECTOR", "class_name": "Collector" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Collector"] }]
+}
